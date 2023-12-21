@@ -16,6 +16,10 @@ require('dotenv').config();
 connectDB();
 const app = express();
 
+app.get("/", (req, res) => {
+  res.send("Hello, this is the root route!");
+});
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 
